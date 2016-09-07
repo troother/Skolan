@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Filhatering")]
+[assembly: AssemblyTitle("Windows forms övn 4")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Filhatering")]
+[assembly: AssemblyProduct("Windows forms övn 4")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("01973ca5-d6da-499d-9333-0ada74907f28")]
+[assembly: Guid("3bbf1d70-9c39-4cc9-a5ea-726459810dd2")]
 
 // Version information for an assembly consists of the following four values:
 //
