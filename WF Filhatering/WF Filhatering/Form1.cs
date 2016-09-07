@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,15 +18,17 @@ namespace WF_Filhatering
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button0_Click(object sender, EventArgs e)
         {
-            textBox1.Text = "klickat på knappen";
-
+            textBox0.Text = "Tjenare!";
+            SaveToFile();
         }
 
-        private void openFileDialog1_FileOk(object sender, CancelEventArgs e)
+        public static void SaveToFile()
         {
+            string[] lines = {"Tjenare", "vad heter", "du?"};
 
+            File.WriteAllLines(@"c:\test.txt", lines);
         }
     }
 }

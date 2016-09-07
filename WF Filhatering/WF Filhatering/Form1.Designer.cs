@@ -28,35 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.textBox0 = new System.Windows.Forms.TextBox();
+            this.button0 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox1
+            // textBox0
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 105);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(442, 22);
-            this.textBox1.TabIndex = 0;
+            this.textBox0.Location = new System.Drawing.Point(125, 590);
+            this.textBox0.Name = "textBox0";
+            this.textBox0.Size = new System.Drawing.Size(599, 26);
+            this.textBox0.TabIndex = 0;
             // 
-            // button1
+            // button0
             // 
-            this.button1.Location = new System.Drawing.Point(182, 164);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Visa";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.button0.Location = new System.Drawing.Point(125, 676);
+            this.button0.Name = "button0";
+            this.button0.Size = new System.Drawing.Size(102, 40);
+            this.button0.TabIndex = 1;
+            this.button0.Text = "Visa";
+            this.button0.UseVisualStyleBackColor = true;
+            this.button0.Click += new System.EventHandler(this.button0_Click);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 586);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ClientSize = new System.Drawing.Size(1209, 821);
+            this.Controls.Add(this.button0);
+            this.Controls.Add(this.textBox0);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -66,8 +65,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox0;
+        private System.Windows.Forms.Button button0;
     }
 }
 
