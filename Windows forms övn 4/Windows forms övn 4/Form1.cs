@@ -16,5 +16,20 @@ namespace Windows_forms_övn_4
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void calculateButton_Click(object sender, EventArgs e)
+        {
+            DateTime start = DateTime.Parse(startDateTimePicker.Text);
+            DateTime end = DateTime.Parse(endDateTimePicker.Text);
+
+            daysBox.Text = (end - start).TotalDays.ToString();
+            hoursBox.Text = (end - start).TotalHours.ToString();
+            yearsBox.Text = (end.Year - start.Year).ToString();
+        }
     }
 }
