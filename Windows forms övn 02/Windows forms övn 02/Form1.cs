@@ -26,7 +26,7 @@ namespace Windows_forms_övn_02
         {
             string userinfo = userBox.Text + ", " + passBox.Text;
 
-            Form2 formen = new Form2();
+            Form2 formen = new Form2(userBox.Text);
 
             if (userinfo != "torbjörn, tobbe")
             {
@@ -36,6 +36,7 @@ namespace Windows_forms_övn_02
             if (userinfo == ("torbjörn, tobbe"));
             {             
                 MessageBox.Show("Welcome" + " " + userBox.Text);
+                this.Hide();
                 formen.Show();
             }
         }
