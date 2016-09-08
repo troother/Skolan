@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Management.Instrumentation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -55,15 +56,14 @@ namespace WindowsFormsCalle
         private void button1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text == Username && textBox2.Text == Password)
+            {
                 label1.Text = "Du är inloggad.";
+                Form2 formen = new Form2(textBox1.Text);
+            }
             else
             {
                 label1.Text = "Felaktigt användarnamn och eller lösenord.";
             }
-
-
-            Form2 formen = new Form2(textBox1.Text);
-            formen.Show();
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)

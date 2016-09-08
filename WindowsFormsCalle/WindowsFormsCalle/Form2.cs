@@ -17,9 +17,9 @@ namespace WindowsFormsCalle
             InitializeComponent();
         }
 
-        public Form2(string user) :this()
+        public Form2(string username) : this()
         {
-            correct(user);
+            correct(username);
         }
 
         private void Form2_Load(object sender, EventArgs e)
