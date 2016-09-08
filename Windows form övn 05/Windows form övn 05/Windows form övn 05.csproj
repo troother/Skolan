@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3BBF1D70-9C39-4CC9-A5EA-726459810DD2}</ProjectGuid>
+    <ProjectGuid>{2B624C27-666D-408C-B0FB-0790405E5C8C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Windows_forms_övn_4</RootNamespace>
-    <AssemblyName>Windows forms övn 4</AssemblyName>
+    <RootNamespace>Windows_form_övn_05</RootNamespace>
+    <AssemblyName>Windows form övn 05</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

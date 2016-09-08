@@ -17,9 +17,27 @@ namespace Windows_forms_övn_02
             InitializeComponent();
         }
 
+        public Form2(string user) :this()
+        {
+            changetext(user);
+        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void changetext(string welcome)
+        {
+            textBox1.Text = "welcome " + welcome;
+
+
+        }
+
     }
 }
