@@ -21,7 +21,7 @@ namespace Addressbok_Calle
         {
             string fel;
             if (CheckFields(out fel))
-                MessageBox.Show("Alla värden är ifyllda");
+                MessageBox.Show("Alla värden är ifyllda ok");
             else
                 MessageBox.Show(fel);
         }
