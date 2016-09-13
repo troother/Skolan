@@ -12,8 +12,8 @@ namespace Pizzerian_Tobbe
         {
             List<Pizza> pizzor = new List<Pizza>();
 
-            var one = new Pizza() { Name = "Kebabpizza", Pris = 15 };
-            var two = new Pizza() { Name = "Calzone", Pris = 10 };
+            var one = new Pizza() { Name = "calsone", Pris = 15 };
+            var two = new Pizza() { Name = "bubbe", Pris = 10 };
             var three = new Pizza() { Name = "TobbeSpecial", Pris = 20 };
 
             pizzor.Add(one);
