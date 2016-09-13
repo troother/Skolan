@@ -12,9 +12,9 @@ namespace Pizzerian_Tobbe
         {
             List<Pizza> pizzor = new List<Pizza>();
 
-            var one = new Pizza() { Name = "Kebabpizza", Pris = 90 };
-            var two = new Pizza() { Name = "Calzone", Pris = 90 };
-            var three = new Pizza() { Name = "TobbeSpecial", Pris = 90 };
+            var one = new Pizza() { Name = "Kebabpizza", Pris = 15 };
+            var two = new Pizza() { Name = "Calzone", Pris = 10 };
+            var three = new Pizza() { Name = "TobbeSpecial", Pris = 20 };
 
             pizzor.Add(one);
             pizzor.Add(two);
@@ -24,12 +24,13 @@ namespace Pizzerian_Tobbe
 
             if (pizzor.Count > 2)
             {
-                var ny = pizzor.OrderBy(o => o.Pris).ToList();
+                pizzor.Sort((x,y) => x.Pris.CompareTo(y.Pris));
 
-                ny.RemoveAt(0);
+                pizzor.ElementAt(0).Pris = 0;
 
-                foreach (var pizza in ny)
+                foreach (var pizza in pizzor)
                 {
+                    Console.WriteLine("Pizza: {0}, Pris: {1}", pizza.Name, pizza.Pris);
                     summa += pizza.Pris;
                 }
 
