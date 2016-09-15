@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Addressbok_Calle.Properties
+namespace Gruppövning_12_Vecka_3.Properties
 {
 
 

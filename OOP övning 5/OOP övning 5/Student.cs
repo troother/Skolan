@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Net.Mime;
 using System.Text;
@@ -8,7 +9,7 @@ using System.Windows.Forms;
 
 namespace OOP_övning_5
 {
-    class Student
+    public class Student
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -39,12 +40,13 @@ namespace OOP_övning_5
             foreach (var propertyInfo in props)
             {
                 if (propertyInfo.GetValue(this, null).ToString() == "")
-                    missing += propertyInfo.Name.ToString() + " ";
+                    missing += propertyInfo.Name + " ";
+
+                
             }
 
             return missing;
         }
-
         public string[,] GetGrades()
         {
             string[,] data = new string[3, 2];

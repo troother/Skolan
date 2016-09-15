@@ -91,6 +91,7 @@
             // 
             // txtFirstName
             // 
+            this.txtFirstName.AccessibleName = "Förnamn";
             this.txtFirstName.Location = new System.Drawing.Point(159, 43);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(242, 26);
@@ -98,6 +99,7 @@
             // 
             // txtLastName
             // 
+            this.txtLastName.AccessibleName = "Efternamn";
             this.txtLastName.Location = new System.Drawing.Point(159, 70);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(242, 26);
@@ -105,6 +107,7 @@
             // 
             // txtPersonalNumber
             // 
+            this.txtPersonalNumber.AccessibleName = "Personnummer";
             this.txtPersonalNumber.Location = new System.Drawing.Point(159, 102);
             this.txtPersonalNumber.Name = "txtPersonalNumber";
             this.txtPersonalNumber.Size = new System.Drawing.Size(242, 26);
@@ -112,6 +115,7 @@
             // 
             // txtPhone
             // 
+            this.txtPhone.AccessibleName = "Telefon";
             this.txtPhone.Location = new System.Drawing.Point(159, 135);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(242, 26);
@@ -119,6 +123,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.AccessibleName = "Email";
             this.txtEmail.Location = new System.Drawing.Point(159, 168);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(242, 26);
