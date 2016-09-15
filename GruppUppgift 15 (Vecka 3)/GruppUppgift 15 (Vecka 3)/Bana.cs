@@ -9,7 +9,6 @@ namespace GruppUppgift_15__Vecka_3_
     class Bana
     {
         public Course TypeOfCourse { get; set; }
-        public int CourseNumber { get; set; }
 
     }
 }

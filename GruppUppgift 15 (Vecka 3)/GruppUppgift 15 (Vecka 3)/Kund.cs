@@ -13,5 +13,6 @@ namespace GruppUppgift_15__Vecka_3_
         public string Email { get; set; }
         public string Zipcode { get; set; }
         public string Address { get; set; }
+        public string Phone { get; set; }
     }
 }
