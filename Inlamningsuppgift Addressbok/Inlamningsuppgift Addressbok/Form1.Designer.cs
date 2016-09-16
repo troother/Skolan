@@ -1,4 +1,6 @@
-﻿namespace Inlamningsuppgift_Addressbok
+﻿using System;
+
+namespace Inlamningsuppgift_Addressbok
 {
     partial class Form1
     {
@@ -46,6 +48,7 @@
             this.lblZipCode = new System.Windows.Forms.Label();
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
+            this.lblMessage = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // listViewContacts
@@ -122,6 +125,7 @@
             this.btnSaveNew.TabIndex = 9;
             this.btnSaveNew.Text = "Save New";
             this.btnSaveNew.UseVisualStyleBackColor = true;
+            this.btnSaveNew.Click += new System.EventHandler(this.btnSaveNew_Click);
             // 
             // btnSaveChange
             // 
@@ -131,6 +135,7 @@
             this.btnSaveChange.TabIndex = 10;
             this.btnSaveChange.Text = "Save Change";
             this.btnSaveChange.UseVisualStyleBackColor = true;
+            this.btnSaveChange.Click += new System.EventHandler(this.btnSaveChange_Click);
             // 
             // btnRemove
             // 
@@ -194,13 +199,21 @@
             this.lblEmail.Size = new System.Drawing.Size(65, 25);
             this.lblEmail.TabIndex = 17;
             this.lblEmail.Text = "Email";
-            this.lblEmail.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // lblMessage
+            // 
+            this.lblMessage.AutoSize = true;
+            this.lblMessage.Location = new System.Drawing.Point(406, 450);
+            this.lblMessage.Name = "lblMessage";
+            this.lblMessage.Size = new System.Drawing.Size(0, 25);
+            this.lblMessage.TabIndex = 18;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 444);
+            this.ClientSize = new System.Drawing.Size(810, 526);
+            this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
             this.Controls.Add(this.lblZipCode);
@@ -226,6 +239,8 @@
 
         }
 
+
+
         #endregion
 
         private System.Windows.Forms.ListView listViewContacts;
@@ -246,6 +261,7 @@
         private System.Windows.Forms.Label lblZipCode;
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblEmail;
+        private System.Windows.Forms.Label lblMessage;
     }
 }
 

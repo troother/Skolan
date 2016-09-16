@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,56 @@ namespace Inlamningsuppgift_Addressbok
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private Contact CreateContact()
+        {
+            var contact = new Contact()
+            {
+                FirstName = txtFirstName.Text,
+                LastName = txtLastName.Text,
+                Address = txtAddress.Text,
+                ZipCode = txtZipCode.Text,
+                Phone = txtPhone.Text,
+                Email = txtEmail.Text,
+            };
+
+            return contact;
+        }
+        private void SaveContactToFile(Contact contact)
+        {
+            var sb = new StringBuilder();
+            sb.Append(contact.FirstName + ",");
+            sb.Append(contact.LastName + ",");
+            sb.Append(contact.Address + ",");
+            sb.Append(contact.ZipCode + ",");
+            sb.Append(contact.Phone + ",");
+            sb.Append(contact.Email);
+
+            try
+            {
+                using (var sw = new StreamWriter("Addressbook.txt", true))
+                {
+                    sw.WriteLine(sb.ToString());
+                }
+                lblMessage.ForeColor = Color.Green;
+                lblMessage.Text = @"Contact has been saved";
+            }
+            catch (Exception)
+                {
+                lblMessage.ForeColor = Color.Red;
+                lblMessage.Text = @"Something went wrong";
+            }
+
+            }
+        private void btnSaveNew_Click(object sender, EventArgs e)
+        {
+            var contact = CreateContact();
+            SaveContactToFile(contact);
+        }
+
+        private void btnSaveChange_Click(object sender, EventArgs e)
         {
 
         }
     }
 }
+
