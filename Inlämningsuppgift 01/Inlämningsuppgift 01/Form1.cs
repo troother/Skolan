@@ -26,9 +26,18 @@ namespace Inlämningsuppgift_01
             if (!File.Exists(@"C:\Users\Tobbe\Documents\Addressbook\settings.txt"));
             File.Create(@"C:\Users\Tobbe\Documents\Addressbook\settings.txt");
         }
+
+        private void btnSaveNew_Click(object sender, EventArgs e)
+        {
+             var contact = new Contact();
+            {
+                contact.FirstName = txtFirstName.Text;
+
+            }
+        }
     }
 
-    class Person
+    class Contact
     {
         public string FirstName {get; set;}
         public string LastName {get; set;}
@@ -36,6 +45,6 @@ namespace Inlämningsuppgift_01
         public string ZipCode {get; set;}
         public string City {get; set;}
         public string PhoneNumber {get; set;}
-        public string Email {get; set; }
+        public string Email {get; set; }        
     }
 }
