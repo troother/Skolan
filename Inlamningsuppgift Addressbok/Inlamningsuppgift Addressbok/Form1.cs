@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Inlämningsuppgift_01
+namespace Inlamningsuppgift_Addressbok
 {
     public partial class Form1 : Form
     {
@@ -17,19 +16,10 @@ namespace Inlämningsuppgift_01
         {
             InitializeComponent();
         }
-        private void btnSaveNew_Click(object sender, EventArgs e)
+
+        private void label6_Click(object sender, EventArgs e)
         {
 
-        }
-
-        public void CreateContct()
-        {
-            var contact = new Contact();
-            {
-                contact.FirstName = txtFirstName.Text;
-
-
-            };
         }
     }
 }

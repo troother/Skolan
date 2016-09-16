@@ -1,4 +1,6 @@
-﻿namespace Inlämningsuppgift_01
+﻿using System;
+
+namespace Inlämningsuppgift_01
 {
     partial class Form1
     {
@@ -265,13 +267,18 @@
             this.Controls.Add(this.groupBoxPeople);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            Load += new System.EventHandler(this.Form1_Load);
             this.groupBoxInformation.ResumeLayout(false);
             this.groupBoxInformation.PerformLayout();
             this.groupBoxPeople.ResumeLayout(false);
             this.groupBoxPeople.PerformLayout();
             this.ResumeLayout(false);
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
