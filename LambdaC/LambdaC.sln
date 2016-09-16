@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Addressbok Calle", "Addressbok Calle\Addressbok Calle.csproj", "{A56DE280-4D1A-403E-B77A-8EB622EAB3C8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaC", "LambdaC\LambdaC.csproj", "{517137E9-D6C0-46D8-8B28-E2301F155EAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A56DE280-4D1A-403E-B77A-8EB622EAB3C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A56DE280-4D1A-403E-B77A-8EB622EAB3C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A56DE280-4D1A-403E-B77A-8EB622EAB3C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A56DE280-4D1A-403E-B77A-8EB622EAB3C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{517137E9-D6C0-46D8-8B28-E2301F155EAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{517137E9-D6C0-46D8-8B28-E2301F155EAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{517137E9-D6C0-46D8-8B28-E2301F155EAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{517137E9-D6C0-46D8-8B28-E2301F155EAC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

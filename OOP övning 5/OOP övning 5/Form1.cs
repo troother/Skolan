@@ -12,7 +12,8 @@ namespace OOP_övning_5
 {
     public partial class Form1 : Form
     {
-        private Student student;
+        Student student;
+        StudentInfo studentinfo;
 
         public Form1()
         {
@@ -33,9 +34,8 @@ namespace OOP_övning_5
             }
             else
             {
-                MessageBox.Show(
-                    $"Du har matat in följande uppgifter:\nFörnamn: {student.FirstName}\nEfternamn: {student.LastName}\n" +
-                    $"Personnummer: {student.PersonalNumber}\nTelefon: {student.Phone}\nEmail: {student.Email}\nStämmer det?");
+                studentinfo = new StudentInfo(student);
+                studentinfo.Show();
             }
 
         }
@@ -52,7 +52,6 @@ namespace OOP_övning_5
 
         private void button2_Click(object sender, EventArgs e)
         {
-
             for (int i = 0; i < this.Controls.Count; i++)
             {
                 if (this.Controls[i].GetType().ToString().ToLower().Contains("textbox"))
