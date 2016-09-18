@@ -68,6 +68,26 @@ namespace Inlamningsuppgift_Addressbok
         {
 
         }
+
+        private List<string> GetInfo()
+        {
+            List<string> Addressbook = new List<string>();
+            string path = @"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt";
+            StreamReader sr = new StreamReader(path);
+            string line = "";
+            while ((line = sr.ReadLine()) != null)
+            {
+                Addressbook.Add(line);
+            }
+            sr.Close();
+            return Addressbook;
+        }
+
+        private void btnGetContacts_Click(object sender, EventArgs e)
+        {
+            List<string> list = GetInfo();
+            listBoxContacts.DataSource = list;
+        }
     }
 }
 
