@@ -55,8 +55,9 @@ namespace Inlamningsuppgift_Addressbok
             // txtSearch
             // 
             this.txtSearch.Location = new System.Drawing.Point(26, 28);
+            this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(194, 31);
+            this.txtSearch.Size = new System.Drawing.Size(194, 36);
             this.txtSearch.TabIndex = 1;
             // 
             // txtFirstName
@@ -105,16 +106,17 @@ namespace Inlamningsuppgift_Addressbok
             // 
             this.btnSearch.Location = new System.Drawing.Point(238, 28);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(102, 31);
+            this.btnSearch.Size = new System.Drawing.Size(102, 36);
             this.btnSearch.TabIndex = 8;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnSaveNew
             // 
             this.btnSaveNew.Location = new System.Drawing.Point(406, 355);
             this.btnSaveNew.Name = "btnSaveNew";
-            this.btnSaveNew.Size = new System.Drawing.Size(104, 59);
+            this.btnSaveNew.Size = new System.Drawing.Size(104, 70);
             this.btnSaveNew.TabIndex = 9;
             this.btnSaveNew.Text = "Save New";
             this.btnSaveNew.UseVisualStyleBackColor = true;
@@ -122,9 +124,9 @@ namespace Inlamningsuppgift_Addressbok
             // 
             // btnSaveChange
             // 
-            this.btnSaveChange.Location = new System.Drawing.Point(536, 355);
+            this.btnSaveChange.Location = new System.Drawing.Point(534, 355);
             this.btnSaveChange.Name = "btnSaveChange";
-            this.btnSaveChange.Size = new System.Drawing.Size(104, 59);
+            this.btnSaveChange.Size = new System.Drawing.Size(104, 70);
             this.btnSaveChange.TabIndex = 10;
             this.btnSaveChange.Text = "Save Change";
             this.btnSaveChange.UseVisualStyleBackColor = true;
@@ -132,9 +134,9 @@ namespace Inlamningsuppgift_Addressbok
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(669, 355);
+            this.btnRemove.Location = new System.Drawing.Point(660, 355);
             this.btnRemove.Name = "btnRemove";
-            this.btnRemove.Size = new System.Drawing.Size(104, 59);
+            this.btnRemove.Size = new System.Drawing.Size(113, 70);
             this.btnRemove.TabIndex = 11;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
@@ -205,7 +207,7 @@ namespace Inlamningsuppgift_Addressbok
             // 
             this.btnGetContacts.Location = new System.Drawing.Point(26, 421);
             this.btnGetContacts.Name = "btnGetContacts";
-            this.btnGetContacts.Size = new System.Drawing.Size(314, 33);
+            this.btnGetContacts.Size = new System.Drawing.Size(314, 54);
             this.btnGetContacts.TabIndex = 19;
             this.btnGetContacts.Text = "Get contacts";
             this.btnGetContacts.UseVisualStyleBackColor = true;
@@ -246,7 +248,7 @@ namespace Inlamningsuppgift_Addressbok
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtSearch);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "5";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,6 +13,7 @@ namespace Inlamningsuppgift_Addressbok
 {
     public partial class Form1 : Form
     {
+        Search Search = new Search();
         public Form1()
         {
             InitializeComponent();
@@ -22,12 +23,12 @@ namespace Inlamningsuppgift_Addressbok
         {
             var contact = new Contact()
             {
-                FirstName = txtFirstName.Text,
-                LastName = txtLastName.Text,
-                Address = txtAddress.Text,
-                ZipCode = txtZipCode.Text,
-                Phone = txtPhone.Text,
-                Email = txtEmail.Text,
+                FirstName = txtFirstName.Text.ToLower(),
+                LastName = txtLastName.Text.ToLower(),
+                Address = txtAddress.Text.ToLower(),
+                ZipCode = txtZipCode.Text.ToLower(),
+                Phone = txtPhone.Text.ToLower(),
+                Email = txtEmail.Text.ToLower(),
             };
 
             return contact;
@@ -62,6 +63,13 @@ namespace Inlamningsuppgift_Addressbok
         {
             var contact = CreateContact();
             SaveContactToFile(contact);
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtAddress.Clear();
+            txtZipCode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+            
         }
 
         private void btnSaveChange_Click(object sender, EventArgs e)
@@ -85,8 +93,18 @@ namespace Inlamningsuppgift_Addressbok
 
         private void btnGetContacts_Click(object sender, EventArgs e)
         {
+            listBoxContacts.Items.Clear();
             List<string> list = GetInfo();
-            listBoxContacts.DataSource = list;
+            foreach (var line in list)
+            {
+                listBoxContacts.Items.Add(line);
+            }
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            listBoxContacts.Items.Clear();
+            Search.SearchContact(listBoxContacts,txtSearch.Text);
         }
     }
 }
