@@ -66,49 +66,49 @@ namespace Inlamningsuppgift_Addressbok
             this.txtFirstName.Location = new System.Drawing.Point(536, 25);
             this.txtFirstName.Name = "txtFirstName";
             this.txtFirstName.Size = new System.Drawing.Size(237, 31);
-            this.txtFirstName.TabIndex = 2;
+            this.txtFirstName.TabIndex = 3;
             // 
             // txtLastName
             // 
             this.txtLastName.Location = new System.Drawing.Point(536, 80);
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.Size = new System.Drawing.Size(237, 31);
-            this.txtLastName.TabIndex = 3;
+            this.txtLastName.TabIndex = 4;
             // 
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(536, 245);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(237, 31);
-            this.txtPhone.TabIndex = 4;
+            this.txtPhone.TabIndex = 7;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(536, 300);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(237, 31);
-            this.txtEmail.TabIndex = 5;
+            this.txtEmail.TabIndex = 8;
             // 
             // txtAddress
             // 
             this.txtAddress.Location = new System.Drawing.Point(536, 135);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(237, 31);
-            this.txtAddress.TabIndex = 6;
+            this.txtAddress.TabIndex = 5;
             // 
             // txtZipCode
             // 
             this.txtZipCode.Location = new System.Drawing.Point(536, 190);
             this.txtZipCode.Name = "txtZipCode";
             this.txtZipCode.Size = new System.Drawing.Size(237, 31);
-            this.txtZipCode.TabIndex = 7;
+            this.txtZipCode.TabIndex = 6;
             // 
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(238, 28);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(102, 36);
-            this.btnSearch.TabIndex = 8;
+            this.btnSearch.TabIndex = 2;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
@@ -209,7 +209,7 @@ namespace Inlamningsuppgift_Addressbok
             this.btnGetContacts.Location = new System.Drawing.Point(26, 359);
             this.btnGetContacts.Name = "btnGetContacts";
             this.btnGetContacts.Size = new System.Drawing.Size(314, 85);
-            this.btnGetContacts.TabIndex = 19;
+            this.btnGetContacts.TabIndex = 12;
             this.btnGetContacts.Text = "Get contacts";
             this.btnGetContacts.UseVisualStyleBackColor = true;
             this.btnGetContacts.Click += new System.EventHandler(this.btnGetContacts_Click);
@@ -221,7 +221,7 @@ namespace Inlamningsuppgift_Addressbok
             this.listBoxContacts.Location = new System.Drawing.Point(26, 99);
             this.listBoxContacts.Name = "listBoxContacts";
             this.listBoxContacts.Size = new System.Drawing.Size(314, 254);
-            this.listBoxContacts.TabIndex = 20;
+            this.listBoxContacts.TabIndex = 13;
             // 
             // lblMessageSearch
             // 
