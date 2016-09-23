@@ -104,7 +104,8 @@ namespace Inlamningsuppgift_Addressbok
         private void btnSearch_Click(object sender, EventArgs e)
         {
             listBoxContacts.Items.Clear();
-            Search.SearchContact(listBoxContacts,txtSearch.Text);
+            lblMessageSearch.Text = "";
+            Search.SearchContact(listBoxContacts,txtSearch.Text, lblMessageSearch);
         }
     }
 }
