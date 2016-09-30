@@ -141,6 +141,7 @@ namespace Inlamningsuppgift_Addressbok
             this.btnRemove.TabIndex = 11;
             this.btnRemove.Text = "Remove";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click);
             // 
             // lblFirstName
             // 
@@ -208,7 +209,7 @@ namespace Inlamningsuppgift_Addressbok
             // 
             this.btnGetContacts.Location = new System.Drawing.Point(26, 359);
             this.btnGetContacts.Name = "btnGetContacts";
-            this.btnGetContacts.Size = new System.Drawing.Size(314, 85);
+            this.btnGetContacts.Size = new System.Drawing.Size(314, 66);
             this.btnGetContacts.TabIndex = 12;
             this.btnGetContacts.Text = "Get contacts";
             this.btnGetContacts.UseVisualStyleBackColor = true;
@@ -259,7 +260,7 @@ namespace Inlamningsuppgift_Addressbok
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.txtSearch);
             this.Name = "Form1";
-            this.Text = "5";
+            this.Text = "Address book";
             this.ResumeLayout(false);
             this.PerformLayout();
 

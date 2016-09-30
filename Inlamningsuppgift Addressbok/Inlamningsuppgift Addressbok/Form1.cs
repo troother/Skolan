@@ -8,12 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Schema;
 
 namespace Inlamningsuppgift_Addressbok
 {
     public partial class Form1 : Form
     {
+        List<Contact> _contact = new List<Contact>();
+
         Search Search = new Search();
+        private string _currentId;
+
         public Form1()
         {
             InitializeComponent();
@@ -29,6 +34,7 @@ namespace Inlamningsuppgift_Addressbok
                 ZipCode = txtZipCode.Text.ToLower(),
                 Phone = txtPhone.Text.ToLower(),
                 Email = txtEmail.Text.ToLower(),
+                Id = Guid.NewGuid().ToString(),
             };
 
             return contact;
@@ -41,7 +47,8 @@ namespace Inlamningsuppgift_Addressbok
             sb.Append(contact.Address + ",");
             sb.Append(contact.ZipCode + ",");
             sb.Append(contact.Phone + ",");
-            sb.Append(contact.Email);
+            sb.Append(contact.Email + ",");
+            sb.Append(contact.Id);
 
             try
             {
@@ -57,8 +64,7 @@ namespace Inlamningsuppgift_Addressbok
                 lblMessage.ForeColor = Color.Red;
                 lblMessage.Text = @"Something went wrong";
             }
-
-            }
+         }
         private void btnSaveNew_Click(object sender, EventArgs e)
         {
             var contact = CreateContact();
@@ -75,29 +81,76 @@ namespace Inlamningsuppgift_Addressbok
         private void btnSaveChange_Click(object sender, EventArgs e)
         {
 
+            //    var fillOut = listBoxContacts.SelectedItem.ToString().Split(',');
+
+            //    var test = GetInfo();
+
+            //    var objekt = test.Find(x => x._currentId).
+
+
         }
 
-        private List<string> GetInfo()
+        public void DeleteLine(string id)
         {
-            List<string> Addressbook = new List<string>();
+            var book = GetInfo();
+            var contact = FindItemOnId(id, book);
+            book.Remove(contact);
+            
+        }
+
+
+
+        private Contact FindItemOnId(string id, List<Contact> contacts)
+        {
+            foreach (var contact in contacts)
+            {
+                if (contact.Id == id)
+                {
+                    return contact;
+                }
+            }
+            return null;
+        }
+
+
+        private List<Contact> GetInfo()
+        {
+            List<Contact> Addressbook = new List<Contact>();
             string path = @"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt";
             StreamReader sr = new StreamReader(path);
             string line = "";
             while ((line = sr.ReadLine()) != null)
             {
-                Addressbook.Add(line);
+                var contactArray = line.Split(',');
+                Contact contact = new Contact() {FirstName = contactArray[0], LastName = Name = contactArray[1], Address = contactArray[2], ZipCode = contactArray[3], Phone = contactArray[4], Email = contactArray[5], Id = contactArray[6]};
+                Addressbook.Add(contact);
             }
             sr.Close();
             return Addressbook;
         }
+        //private List<string> GetInfo()
+        //{
+
+        //    List<string> Addressbook = new List<string>();
+        //    string path = @"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt";
+        //    StreamReader sr = new StreamReader(path);
+        //    string line = "";
+        //    while ((line = sr.ReadLine()) != null)
+        //    {
+        //        Addressbook.Add(line);
+        //    }
+        //    sr.Close();
+        //    return Addressbook;
+        //}
 
         private void btnGetContacts_Click(object sender, EventArgs e)
         {
             listBoxContacts.Items.Clear();
-            List<string> list = GetInfo();
+            List<Contact> list = GetInfo();
             foreach (var line in list)
             {
-                listBoxContacts.Items.Add(line);
+                ListViewItem item = new ListViewItem(line.FirstName);
+                listBoxContacts.Items.Add(item);
             }
         }
 
@@ -107,6 +160,45 @@ namespace Inlamningsuppgift_Addressbok
             lblMessageSearch.Text = "";
             Search.SearchContact(listBoxContacts,txtSearch.Text, lblMessageSearch);
         }
+
+        private void listBoxContacts_SelectedIndexChanged(object sender, EventArgs e, ListBox myListBox)
+        {
+
+            var fillOut = listBoxContacts.SelectedItem.ToString().Split(',');
+
+            txtFirstName.Text = fillOut[0];
+            txtLastName.Text = fillOut[1];
+            txtAddress.Text = fillOut[2];
+            txtZipCode.Text = fillOut[3];
+            txtPhone.Text = fillOut[4];
+            txtEmail.Text = fillOut[5];
+            _currentId = fillOut[6];
+        }
+
+        private void btnRemove_Click(object sender, EventArgs e)
+        {
+
+            var lines = File.ReadAllLines(@"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt");
+            var line = 0;
+            for (var i = 0; i < lines.Length; i++)
+            {
+                if (lines[i].Contains(_currentId))
+                {
+                    line = i;
+                }
+            }
+
+            var arrLine = File.ReadAllLines(@"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt").ToList();
+            arrLine.RemoveAt(line);
+
+            File.WriteAllLines(@"C:\Users\Troother\Documents\Visual Studio 2015\Projects\Github\Inlamningsuppgift Addressbok\Inlamningsuppgift Addressbok\bin\Debug\Addressbook.txt", arrLine);
+            txtFirstName.Clear();
+            txtLastName.Clear();
+            txtAddress.Clear();
+            txtZipCode.Clear();
+            txtPhone.Clear();
+            txtEmail.Clear();
+
+        }
     }
 }
-

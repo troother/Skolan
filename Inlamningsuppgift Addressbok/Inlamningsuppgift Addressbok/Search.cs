@@ -28,7 +28,7 @@ namespace Inlamningsuppgift_Addressbok
                         if (row.Contains(searchWord.ToLower()))
                         {
                             string[] information = row.Split(',');
-                            myListBox.Items.Add(information[0] + "," + information[1]);
+                            myListBox.Items.Add(information[0] + "," + information[1] + "," + information[2] + "," + information[3] + "," + information[4] + "," + information[5] + "," + information[6]);
                         }
                     }
                 }
