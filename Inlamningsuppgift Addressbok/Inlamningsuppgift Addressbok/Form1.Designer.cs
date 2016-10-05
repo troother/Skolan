@@ -223,6 +223,7 @@ namespace Inlamningsuppgift_Addressbok
             this.listBoxContacts.Name = "listBoxContacts";
             this.listBoxContacts.Size = new System.Drawing.Size(314, 254);
             this.listBoxContacts.TabIndex = 13;
+            this.listBoxContacts.SelectedIndexChanged += new System.EventHandler(this.listBoxContacts_SelectedIndexChanged);
             // 
             // lblMessageSearch
             // 
