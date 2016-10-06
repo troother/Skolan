@@ -48,9 +48,7 @@ namespace Inlamningsuppgift_Addressbok
             this.lblPhone = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblMessage = new System.Windows.Forms.Label();
-            this.btnGetContacts = new System.Windows.Forms.Button();
             this.listBoxContacts = new System.Windows.Forms.ListBox();
-            this.lblMessageSearch = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -115,7 +113,7 @@ namespace Inlamningsuppgift_Addressbok
             // 
             // btnSaveNew
             // 
-            this.btnSaveNew.Location = new System.Drawing.Point(406, 355);
+            this.btnSaveNew.Location = new System.Drawing.Point(406, 358);
             this.btnSaveNew.Name = "btnSaveNew";
             this.btnSaveNew.Size = new System.Drawing.Size(104, 70);
             this.btnSaveNew.TabIndex = 9;
@@ -125,7 +123,7 @@ namespace Inlamningsuppgift_Addressbok
             // 
             // btnSaveChange
             // 
-            this.btnSaveChange.Location = new System.Drawing.Point(534, 355);
+            this.btnSaveChange.Location = new System.Drawing.Point(536, 358);
             this.btnSaveChange.Name = "btnSaveChange";
             this.btnSaveChange.Size = new System.Drawing.Size(104, 70);
             this.btnSaveChange.TabIndex = 10;
@@ -135,7 +133,7 @@ namespace Inlamningsuppgift_Addressbok
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(660, 355);
+            this.btnRemove.Location = new System.Drawing.Point(660, 358);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(113, 70);
             this.btnRemove.TabIndex = 11;
@@ -205,43 +203,22 @@ namespace Inlamningsuppgift_Addressbok
             this.lblMessage.Size = new System.Drawing.Size(0, 25);
             this.lblMessage.TabIndex = 18;
             // 
-            // btnGetContacts
-            // 
-            this.btnGetContacts.Location = new System.Drawing.Point(26, 359);
-            this.btnGetContacts.Name = "btnGetContacts";
-            this.btnGetContacts.Size = new System.Drawing.Size(314, 66);
-            this.btnGetContacts.TabIndex = 12;
-            this.btnGetContacts.Text = "Get contacts";
-            this.btnGetContacts.UseVisualStyleBackColor = true;
-            this.btnGetContacts.Click += new System.EventHandler(this.btnGetContacts_Click);
-            // 
             // listBoxContacts
             // 
             this.listBoxContacts.FormattingEnabled = true;
             this.listBoxContacts.ItemHeight = 25;
-            this.listBoxContacts.Location = new System.Drawing.Point(26, 99);
+            this.listBoxContacts.Location = new System.Drawing.Point(26, 74);
             this.listBoxContacts.Name = "listBoxContacts";
-            this.listBoxContacts.Size = new System.Drawing.Size(314, 254);
+            this.listBoxContacts.Size = new System.Drawing.Size(314, 354);
             this.listBoxContacts.TabIndex = 13;
             this.listBoxContacts.SelectedIndexChanged += new System.EventHandler(this.listBoxContacts_SelectedIndexChanged);
-            // 
-            // lblMessageSearch
-            // 
-            this.lblMessageSearch.AutoSize = true;
-            this.lblMessageSearch.ForeColor = System.Drawing.Color.Red;
-            this.lblMessageSearch.Location = new System.Drawing.Point(26, 71);
-            this.lblMessageSearch.Name = "lblMessageSearch";
-            this.lblMessageSearch.Size = new System.Drawing.Size(0, 25);
-            this.lblMessageSearch.TabIndex = 21;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 491);
-            this.Controls.Add(this.lblMessageSearch);
+            this.ClientSize = new System.Drawing.Size(810, 490);
             this.Controls.Add(this.listBoxContacts);
-            this.Controls.Add(this.btnGetContacts);
             this.Controls.Add(this.lblMessage);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.lblPhone);
@@ -288,9 +265,7 @@ namespace Inlamningsuppgift_Addressbok
         private System.Windows.Forms.Label lblPhone;
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblMessage;
-        private System.Windows.Forms.Button btnGetContacts;
         private System.Windows.Forms.ListBox listBoxContacts;
-        private System.Windows.Forms.Label lblMessageSearch;
     }
 }
 
